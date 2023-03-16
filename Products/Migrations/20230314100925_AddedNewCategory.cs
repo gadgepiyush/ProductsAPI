@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Products.Migrations
 {
-    public partial class InitialCreatewp : Migration
+    public partial class AddedNewCategory : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

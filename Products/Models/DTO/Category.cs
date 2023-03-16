@@ -1,11 +1,8 @@
-﻿namespace Products.Models.Domain
+﻿namespace Products.Models.DTO
 {
     public class Category
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-
-        //Navigation 
-        public ICollection<Product> Products{ get; set;}
     }
 }

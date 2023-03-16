@@ -98,7 +98,7 @@ namespace Products.Migrations
             modelBuilder.Entity("Products.Models.Domain.Product", b =>
                 {
                     b.HasOne("Products.Models.Domain.Category", "Category")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -112,6 +112,11 @@ namespace Products.Migrations
                     b.Navigation("Category");
 
                     b.Navigation("Seller");
+                });
+
+            modelBuilder.Entity("Products.Models.Domain.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }
